@@ -13,6 +13,8 @@ const app = new Vue({
     el: '#app',
 });
 
+const createApp = async () => {
+  await store.dispatch('auth/currentUser')
 
 new Vue({
   el: '#app',
@@ -21,3 +23,6 @@ new Vue({
   components: { App }, // ルートコンポーネントの使用を宣言する
   template: '<App />' // ルートコンポーネントを描画する
 })
+}
+
+createApp()
