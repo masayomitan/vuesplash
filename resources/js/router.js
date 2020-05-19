@@ -7,6 +7,8 @@ import PhotoList from './pages/PhotoList.vue'
 import Login from './pages/Login.vue'
 
 import store from './store'
+import PhotoDetail from './pages/PhotoDetail.vue'
+
 
 
 
@@ -30,7 +32,12 @@ const routes = [
         next()
       }
     }
-  }
+  },
+  {
+    path: '/photos/:id',
+    component: PhotoDetail,
+    props: true
+  },
 ]
 
 // VueRouterインスタンスを作成する
